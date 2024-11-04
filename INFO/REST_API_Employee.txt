@@ -1,0 +1,102 @@
+REST API Employee
+---------------------
+
+(1) Отримання даних
+
+GET
+http://localhost:8080/JServlet-REST-Employee-1.0-SNAPSHOT/api/v1/employees
+
+(2) Створення даних
+
+POST
+http://localhost:8080/JServlet-REST-Employee-1.0-SNAPSHOT/api/v1/employees
+
+Виконуємо окремі запити
+
+{
+    "firstName": "John",
+    "lastName": "Green",
+    "position": "Software Engineer",
+    "phone": "38099-000-01-02"
+}
+
+{
+    "firstName": "Bob",
+    "lastName": "Bright",
+    "position": "Digital Marketing Specialist",
+    "phone": "38099-000-01-03"
+}
+
+{
+    "firstName": "Alice",
+    "lastName": "Terra",
+    "position": "Senior Staff Accountant",
+    "phone": "38099-000-01-04"
+}
+
+{
+    "firstName": "Tom",
+    "lastName": "Bright",
+    "position": "Systems analyst",
+    "phone": "38099-000-01-05"
+}
+
+{
+    "firstName": "Lucy",
+    "lastName": "Moon",
+    "position": "Project manager",
+    "phone": "38099-000-01-06"
+}
+
+
+
+(3) Отримання всіх даних
+
+GET
+http://localhost:8080/JServlet-REST-Employee-1.0-SNAPSHOT/api/v1/employees
+
+
+(4) Отримання даних за id
+
+За існуючим id
+GET
+http://localhost:8080/JServlet-REST-Employee-1.0-SNAPSHOT/api/v1/employees/4
+
+За НЕ існуючим id
+GET
+http://localhost:8080/JServlet-REST-Employee-1.0-SNAPSHOT/api/v1/employees/9
+
+
+(5) Оновлення даних за id
+
+PUT
+http://localhost:8080/JServlet-REST-Employee-1.0-SNAPSHOT/api/v1/employees/2
+
+{
+    "firstName": "Bob",
+    "lastName": "Bright",
+    "position": "Computer Support Specialists",
+    "phone": "38099-000-03-03"
+}
+
+PUT
+http://localhost:8080/JServlet-REST-Employee-1.0-SNAPSHOT/api/v1/employees/3
+
+{
+    "firstName": "Alice",
+    "lastName": "Sunny",
+    "position": "Chief Information Officer",
+    "phone": "+38099-000-03-03"
+}
+
+Перевіремо через MySQL Workbench та REST-запит за відповідним id.
+Можемо також спробувати оновлення за НЕ існуючим id.
+
+
+(6) Видалення даних за id
+
+DELETE
+http://localhost:8080/JServlet-REST-Employee-1.0-SNAPSHOT/api/v1/employees/4
+
+Перевіремо через MySQL Workbench та REST-запит отримання всіх даних.
+Можемо також спробувати видалення за НЕ існуючим id.
